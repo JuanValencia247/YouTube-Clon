@@ -1,0 +1,373 @@
+@use "variables" as v;
+//================ Main =============== //
+.main-container {
+  width: 1440px;
+  display: flex;
+  margin: 0 auto;
+  @media (max-width: 400px) {
+    display: flex;
+    flex-direction: column;
+  }
+  ////////////////////////// Section 1 //////////////////////////
+  .section1-container {
+    margin: 80px 10px 5px 35px;
+    color: white;
+    @media (max-width: 400px){
+      margin: 80px 0 0;
+     
+    }
+    &__content-img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+    }
+    &__content-title {
+      font-size: 1.9em;
+      letter-spacing: 0.02em;
+      font-weight: 600;
+      margin: 10px auto 12px;
+    }
+    &__content-description {
+      font-size: 1.4em;
+      line-height: 2rem;
+      font-weight: 600;
+      white-space: pre-wrap;
+      margin-bottom: 18px;
+    }
+    @media (max-width: 400px){
+
+      &__content-title {
+        width: 80%;
+        font-size: 1.5em;
+        margin: 10px 20px 0px;
+      }
+      &__content-description {
+        display: none;
+      }
+    }
+
+    //Content Section
+    &__content-section {
+      display: flex;
+      text-align: center;
+      justify-content: flex-start;
+    }
+    &__content-section-view {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+    &__content-section-view-icon {
+      color: v.$icono;
+      font-size: 2rem;
+      &:hover {
+        cursor: pointer;
+        color: v.$Text-color;
+      }
+    }
+
+    &__content-section-view-des {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin: 0 20px 0 10px;
+    }
+    @media (max-width: 400px){
+      &__content-section {
+        display:none;
+      }
+    }
+    //Seguir
+    &__content-seguir {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 25px;
+    }
+    &__content-seguir-git {
+      border: 1px solid v.$Border-color;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      height: 52px;
+      padding: 6px;
+    }
+    &__content-seguir-git-jc a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      height: 100%;
+    }
+    &__content-seguir-git-jc p {
+      font-size: 1.4em;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__content-seguir-git-jc-img {
+      border: 1px solid white;
+      border-radius: 50%;
+      width: 40px;
+      height: 100%;
+      margin: 0 10px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__content-seguir-git-button {
+      background-color: v.$Button-color;
+      padding: 0 45px;
+      font-weight: 700;
+      border-radius: 2px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__content-seguir-git-button a {
+      text-transform: uppercase;
+      color: white;
+    }
+    //
+    &__content-seguir-comentario {
+      border: 1px solid v.$Border-color;
+      border-radius: 4px;
+      display: flex;
+      padding: 8px 0px 8px 12px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__content-seguir-comentario-p {
+      font-size: 1.3em;
+      padding: 0 12px 0 0;
+      margin-right: 10px;
+      border-right: 1px solid v.$Border-color;
+    }
+    &__content-seguir-comentario-p1 {
+      font-size: 1.1em;
+      font-weight: 100;
+      line-height: 16px;
+    }
+    &__content-seguir-comentario-p1 A {
+      color: white;
+      font-weight: 900;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    @media (max-width: 400px){
+      &__content-seguir {
+        display:none;
+      }
+    }
+   
+    //Comentarios
+    &__content-comentarios {
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+    }
+    &__content-comentarios-100 {
+      font-size: 1.5em;
+    }
+
+    &__content-comentarios-icon {
+      display: flex;
+      align-items: center;
+    }
+    &__content-comentarios-icon i {
+      margin: 0 8px 0 30px;
+      font-size: 2.6em;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__content-comentarios-icon p {
+      font-size: 1.5em;
+      text-transform: uppercase;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    @media (max-width: 400px){
+      &__content-comentarios {
+        display:none;
+      }
+    }
+    
+    //Comentar
+    &__content-comentar {
+      margin-top: 30px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+    }
+    &__content-comentar-img {
+      border: 1px solid white;
+      border-radius: 50%;
+      width: 55px;
+      height: 100%;
+    }
+    &__content-comentar-añade {
+      margin-left: 20px;
+      font-size: 1.5em;
+      width: 100%;
+      color: v.$icono;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid v.$Border-color;
+    }
+    @media (max-width: 400px){
+      &__content-comentar {
+        display:none;
+      }
+    }
+  }
+
+  ////////////////////////// Section 2 //////////////////////////
+  .section2-container {
+    margin: 80px 40px auto 15px;
+    color: white;
+    @media (max-width: 400px){
+      margin: 0;
+    }
+    &__content {
+      width: 400px;
+    }
+    &__content-button {
+      background-color: v.$Items-color;
+      border: none;
+      border: 2px solid v.$Border-color;
+      color: v.$Button-coment;
+      letter-spacing: 0.01rem;
+      font-size: 1rem;
+      font-weight: 800;
+      width: 100%;
+      padding: 8px;
+      transition: 100ms;
+      margin-bottom: 30px;
+      &:hover {
+        color: v.$Text-color;
+        cursor: pointer;
+        transition: 100ms;
+      }
+    }
+    &__content-buttons {
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &__content-buttons-btn {
+      padding: 8px 10px;
+      background-color: v.$Items-color;
+      border: none;
+      border-radius: 50px;
+      border: 1px solid v.$Border-color;
+      color: v.$Text-color;
+      font-size: 1.4rem;
+      font-weight: 600;
+      &:hover {
+        cursor: pointer;
+        background-color: #464646;
+      }
+    }
+    &__content-buttons-btn-icon {
+      background: transparent;
+      color: white;
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 5px;
+      margin-left: 20px;
+      &:hover {
+        cursor: pointer;
+        background-color: #464646;
+      }
+    }
+    @media (max-width: 400px){
+      &__content-button {
+        display: none;
+      }
+      &__content-buttons{
+        display: none;
+      }
+
+    }
+    // Content Video
+    &__content-vid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    &__content-video {
+      display: flex;
+      margin-bottom: 8px;
+    }
+    &__content-video-images {
+      width: 170px;
+      height: 90px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__content-video-images-img {
+      width: 100%;
+      height: 100%;
+    }
+    &__content-video-description {
+      margin-left: 10px;
+      width: 50%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__content-video-description-title {
+      color: white;
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+      line-height: 20px;
+    }
+    &__content-video-description-autor {
+      font-size: 1.2rem;
+      margin-bottom: 3px;
+    }
+    &__content-video-description-visualization {
+      font-size: 1.2rem;
+      color: v.$Button-coment;
+    }
+    @media (max-width: 400px){
+      &__content-vid{
+        margin: 20px auto 0;
+      }
+      &__content-video{
+        flex-direction: column;
+      }
+      &__content-video-images{
+        width: 100%;
+        height: 250px;
+      }
+      &__content-video-description {
+
+        width: 100%;
+        margin: 0;
+        padding: 20px 20px 30px;
+      }
+      &__content-video-description-title{
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        line-height: 20px;
+      }
+      &__content-video-description-div{
+        display: flex;
+      }
+      &__content-video-description-autor {
+        font-size: 1.4rem;
+        margin-right: 10px;
+      }
+      &__content-video-description-visualization {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

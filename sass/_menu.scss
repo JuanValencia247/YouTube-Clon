@@ -1,0 +1,243 @@
+@use "variables" as v;
+
+.navbar {
+  background-color: v.$Items-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+
+  border-bottom: 1px solid v.$Border-color;
+  position: fixed;
+  @media (max-width: 400px) {
+    width: 100%;
+  }
+  //Menu
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+  &__icono-menu {
+    display: flex;
+    align-items: center;
+    font-size: 3.1rem;
+    color: #909090;
+    cursor: pointer;
+  }
+  &__img-logo {
+    width: 150px;
+    height: 23px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: 400px) {
+  }
+  // Buscar
+  &__buscar {
+    display: flex;
+    width: 50%;
+    height: 40px;
+  }
+  &__buscar-input {
+    width: 100%;
+    border: 1px solid v.$Border-color;
+    background-color: v.$buscador;
+    margin-right: 8px;
+    color: v.$icono;
+    padding: 5px;
+    font-size: 1.5em;
+    &::placeholder {
+      padding-left: 5px;
+    }
+    &:focus {
+      border: 1px solid blue;
+    }
+  }
+  &__buscar-icon {
+    color: white;
+    margin: auto;
+    font-size: 2em;
+    padding: 10px 22px;
+    margin-left: -8px;
+    background-color: v.$Border-color;
+    font-weight: 100px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__buscar-micro {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    padding: 10px;
+    background-color: v.$buscador;
+    border-radius: 50%;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 400px) {
+    &__buscar-input {
+      display: none;
+    }
+    &__buscar-icon {
+      margin: 0;
+      padding: 10px 0;
+      margin-left: 60px;
+      background-color: transparent;
+    }
+    &__buscar-micro {
+      display: none;
+    }
+  }
+  //Avatar
+  &__avatar {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar-icon-1 {
+    margin: 0 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__avatar-icon-2 {
+    margin: 0 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__avatar-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+  &__avatar-img-avatar {
+    height: 35px;
+  }
+  @media (max-width: 400px) {
+    &__avatar-icon-1 {
+      display: none;
+    }
+    &__avatar-img {
+      margin: 0;
+    }
+  }
+}
+.aside {
+  border-bottom: 1px solid v.$Border-color;
+  background-color: v.$Items-color;
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: hidden;
+  margin-top: 0px;
+  transition: 200ms;
+  &__desplegable {
+    background-color: v.$Items-color;
+    padding: 10px 70px 10px 20px;
+    position: fixed;
+    z-index: 2;
+  }
+  &__desplegable-ico-logo {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__span {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #fffbfb;
+    &:hover {
+      overflow-y: auto;
+    }
+  }
+
+  &__container {
+    padding-top: 50px;
+  }
+  &__container-svg {
+    border-bottom: 1px solid v.$Border-color;
+    padding: 10px 1px;
+    color: v.$Text-color;
+  }
+  &__container-svg div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  &__container-svg div:hover {
+    background-color: #303030;
+  }
+  &__container-svg div span {
+    margin-left: 15px;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #909090;
+    border-radius: 5px;
+  }
+  &__text {
+    padding: 10px 20px;
+    color: #aaaaaa;
+  }
+}
+.desplegar {
+  transform: translateX(-100%);
+}
+
+// Mobil
+.navbar-footer {
+  position: absolute;
+  &__menu {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .navbar-footer {
+    background-color: v.$Items-color;
+    position: absolute;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid v.$Border-color;
+    padding: 8px 15px;
+    &__menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    ul {
+      color: white;
+      display: flex;
+      justify-content: space-between;
+    }
+    li {
+      font-size: 1.3em;
+    }
+  }
+}
